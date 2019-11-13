@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Meu Aplicativo ASP.NET</title>
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" type="text/css" href="~/Content/main.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="~/Content/demo.css" media="screen">
+
+</head>
+<body class="background">
+    <header class="header-1">
+        <div class="menu">
+            <ul>
+                <li>@Html.ActionLink("Home", "Index", "Home", new { @style = "color:white" })</li>
+                <li>@Html.ActionLink("Logar", "Login", "Home", new { @style = "color:white" })</li>
+                <li>@Html.ActionLink("Cadastre-se", "CadastroImagem", "Home", new { @style = "color:white" })</li>
+                <li>@Html.ActionLink("Sobre Nós", "About", "Home", new { @style = "color:white" })</li>
+            </ul>
+        </div>
+    </header>
+    <h1 class="title">Eco Recognize</h1>
+    <div class="container body-content">
+        @RenderBody()
+
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    <script src="~/Scripts/imageRecognition.js"></script>
+</body>
+</html>

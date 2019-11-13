@@ -1,0 +1,4 @@
+﻿Etapa 1:
+         
+		 Testar as coordenadas do eixo x com diferentes fotos da mesma pessoa.
+		 Sempre depurar com esta URL: http://localhost:64348/

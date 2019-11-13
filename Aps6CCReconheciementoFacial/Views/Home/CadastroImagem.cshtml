@@ -1,0 +1,53 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>tracking.js - face hello world</title>
+
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script src="~/Scripts/tracking-min.js"></script>
+    <script src="~/data/face-min.js"></script>
+    <script src="~/data/eye-min.js"></script>
+    <script src="~/data/mouth-min.js"></script>
+
+    <style>
+        .rect {
+            border: 2px solid #a64ceb;
+            left: -1000px;
+            position: absolute;
+            top: -1000px;
+        }
+
+        #img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="demo-frame">
+        <div class="demo-container">
+            <form style="margin-left:230px; margin-top:30px">
+                <div class="form-group">
+                    <h2>Cadastro</h2>
+                    <label for="exampleInputEmail1">Nome</label>
+                    <input type="text" class="form-control" id="nameUser" aria-describedby="emailHelp" placeholder="Entre com o seu nome">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    <input style="float:right;margin-top:-20px" class="file-chooser" type="file" accept="image/*">
+                </div>
+
+            </form>
+            <img id="img" class="preview-img" height="324" style="margin-top:-13%;margin-left:-20%">
+            <button onclick="armazenarRosto()" style="margin-top:300px;margin-left:370px;font-size:20px; border-radius: 40px; position:absolute; z-index:9999;" class="btn btn-success">Validar</button>
+        </div>
+    </div>
+    <div id="teste"></div>       
+    <script src="~/Scripts/imageRecognition.js" charset="utf-8"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+</body>
+</html>
